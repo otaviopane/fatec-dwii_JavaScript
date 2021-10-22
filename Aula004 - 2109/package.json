@@ -1,0 +1,22 @@
+{
+  "name": "fatec-dwii_javascript",
+  "version": "1.0.0",
+  "description": "Iniciando com Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/otaviopane/fatec-dwii_JavaScript.git"
+  },
+  "author": "Otavio F. G. Pane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/otaviopane/fatec-dwii_JavaScript/issues"
+  },
+  "homepage": "https://github.com/otaviopane/fatec-dwii_JavaScript#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
