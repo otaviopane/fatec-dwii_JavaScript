@@ -6,11 +6,17 @@ app.get("/", function(requisicao, resposta) { // forma mais simples de criar uma
 }); // Toda rota criado precisa devolver uma resposta
 // Nesse caso em formato de texto. Mas pode ser uma página HTML, um arquivo, etc.
 
-app.get("/blog/:nome", function(requisicao, resposta) { // (locahost:3000/blog)
+app.get("/blog/:nome?", function(requisicao, resposta) { // (locahost:3000/blog)
+   // O parametro 'nome' com '?' faz este ser opcional, não dará erro ao faltar
    // requisicao: são dados enviados pelo usuário
    // resposta: resposta que vai ser enviada para o usuário
-   var nome = requisicao.params.nome
-   resposta.send(`<h1> Olá ${nome}, como está? </h1>`);
+   var nome = requisicao.params.nome;
+   if (nome) {
+      resposta.send(`<h1> Olá ${nome}, como está? </h1>`);
+   }
+   else {
+      resposta.send("Bem vindo ao meu blog!");
+   };
 });
 
 app.listen(3000, function(erro) {
@@ -19,11 +25,5 @@ app.listen(3000, function(erro) {
    }
    else {
       console.log('Servidor iniciado com sucesso');
-   }
+   };
 });
-// inicia o servidor -> $ node index.js 
-
-// Ao acessar o locahost:3000
-// Terá o erro: Cannot GET /
-// Esse erro acontece pois não existe rota
-// Precisa usar rotas
