@@ -6,8 +6,11 @@ app.get("/", function(requisicao, resposta) { // forma mais simples de criar uma
 }); // Toda rota criado precisa devolver uma resposta
 // Nesse caso em formato de texto. Mas pode ser uma página HTML, um arquivo, etc.
 
-app.get("/blog", function(requisicao, resposta) { // (locahost:3000/blog)
-   resposta.send("Bem Vindo ao meu blog");
+app.get("/blog/:nome", function(requisicao, resposta) { // (locahost:3000/blog)
+   // requisicao: são dados enviados pelo usuário
+   // resposta: resposta que vai ser enviada para o usuário
+   var nome = requisicao.params.nome
+   resposta.send(`<h1> Olá ${nome}, como está? </h1>`);
 });
 
 app.listen(3000, function(erro) {
