@@ -6,14 +6,14 @@
 // reiniciar a sua aplicação sempre que detectar modificação.
 // Para instalar: npm install nodemon -g (-g significa que você quer instalar globalmente no seu computador)
 
-
+// Para instalar o da biblioteca do PostgreSQL: $ npm install pg
 const {Client} = require('pg')
 
 const client = new Client({
    host: "localhost",
-   user: "postgres",
+   user: "system",
    port: 5432,
-   password: "123456",
+   password: "FATEC",
    database: "venda",
 });
 
