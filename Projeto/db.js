@@ -42,8 +42,8 @@ const Usuario = sequelize.define('usuarios', {
    },
 });
 
-Produto.sync({force:true})
-Usuario.sync({force:true})
+// Produto.sync({force:true})
+// Usuario.sync({force:true})
 
 
 //insert na tabel a Produto

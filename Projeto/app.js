@@ -8,8 +8,8 @@ app.get('/', function(req, res) {
    res.render("../views/home")
 });
 
-app.get('/tabelas', function(req, res) {
-   res.render("../views/tabelas")
+app.get('/blog', function(req, res) {
+   res.render("../views/blog")
 });
 
 app.listen(3000, function () {
